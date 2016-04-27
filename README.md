@@ -1,23 +1,19 @@
 # Intro to Ruby
 
-The slides for this course can be viewed [here](http://kcjonesevans.github.io/gdidayton-intro-ruby)
+The slides for this course can be viewed [here](http://amandamunoz.github.io/gdi-intro-ruby)
 
 This is an Intro to Ruby course. Original material by Cheri Allen and Heather Moore. Originally Adapted by K.C. Jones-Evans of the Dayton chapter. This is an adaptation by Amanda Muñoz and Sean Kelly of the Boston chapter.
 
-The course is meant to be taught in 5 two-hour sections, but KC decided to do 4 three-hour sessions plus ruby installfest. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+The course was originally taught in 5 two-hour sections. We cut it down into 4
+two-hour sections, folding installation into the first section. 
 
 ## Classes
 
-### Setup (Class 0) aka Ruby Installfest 
-
-Installfest & Intro to Command Line
-
-Get your developement environment set up on your machine. Install Ruby, Rails, and Git, with the assistance of some helpful volunteers. 
-
 ### Class 1
 
-Intro to programming in Ruby
+Installation & Intro to Command Line, intro to programming in Ruby
 
+Get your developement environment set up on your machine. Install Ruby, Rails, and Git, with the assistance of some helpful volunteers. 
 What is programming? What is Ruby? We'll give you some context for the class, then dive right into writing code! Using the Interactive Ruby Shell, we'll begin experimenting with variables, methods, and data types. We'll end the class by writing a little interactive command line program.
 
 ### Class 2
