@@ -2,7 +2,7 @@
 
 The slides for this course can be viewed [here](http://kcjonesevans.github.io/gdidayton-intro-ruby)
 
-This is an Intro to Ruby course, Original material by Cheri Allen and Heather Moore. Adapted by K.C. Jones-Evans of the Dayton chapter. 
+This is an Intro to Ruby course. Original material by Cheri Allen and Heather Moore. Originally Adapted by K.C. Jones-Evans of the Dayton chapter. This is an adaptation by Amanda Muñoz and Sean Kelly of the Boston chapter.
 
 The course is meant to be taught in 5 two-hour sections, but KC decided to do 4 three-hour sessions plus ruby installfest. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
