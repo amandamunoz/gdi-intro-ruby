@@ -11,8 +11,7 @@ two-hour sections, folding installation into the first section.
 
 ### Class 1
 
-Installation & Intro to Command Line
-Intro to programming in Ruby
+Installation & Intro to Command Line, intro to programming in Ruby
 
 Get your developement environment set up on your machine. Install Ruby, Rails, and Git, with the assistance of some helpful volunteers. 
 What is programming? What is Ruby? We'll give you some context for the class, then dive right into writing code! Using the Interactive Ruby Shell, we'll begin experimenting with variables, methods, and data types. We'll end the class by writing a little interactive command line program.
