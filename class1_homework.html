@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Ruby : Class 1 HOMEWORK</title>
+
+    <meta name="description" content="This is the official Girl Develop It Core Intro to Ruby course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/gdi-sass.css" id="theme">
+    <link rel="stylesheet" href="lib/css/light.css">
+    <link rel="stylesheet" href="css/print/pdf.css" media="print">
+
+    <script src="lib/js/head.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>Command Line Homework</h3>
+        </section>
+
+        <section>
+        <h3>Command Line</h3>
+        <p class="box--small">Try out the following commands!<br/><small>Things that start with <code>#</code> are comments - you don't need to type those out.</small></p>
+        <pre><code class="terminal">
+          # navigate to your desktop
+          cd ~/Desktop    #Linux, Mac
+          cd desktop      #Windows
+
+          # make a directory called ruby_adventures
+          mkdir ruby_adventures
+
+          # navigate into the new ruby_adventures directory
+          cd ruby_adventures
+
+          # create a new file in the current (ruby_adventures) directory
+          touch setup.rb
+
+          # list the contents of the current (ruby_adventures) directory
+          ls
+        </code></pre>
+        </section>
+
+        <section>
+        <h3>Command Line</h3>
+        <p class="box--small copy--small">Not sure what a command does? Or how it works? Use <code>man</code><br/><small>Try using <code>man</code> with a few commands. Type the letter <code>q</code> to exit <code>man</code>.</small></p>
+        <pre style="height: 30px; overflow:hidden;"><code class="terminal">
+          man ls
+        </code></pre>
+        <p>Output:</p>
+        <img src="images/manls.png" >
+        </section>
+
+        <!-- Let's Develop It - 10 min -->
+        <section>
+        <h3>Command Line</h3>
+        <p class="box--small">Working in the terminal, create a directory called <code>gdi_ruby</code> in the location of your choosing.<br/> <small>Desktop? Documents? Somewhere you'll be able to find it again!</small></p>
+        <p class="copy--small">Inside the <code>gdi_ruby</code> directory, create a file called <code>setup.txt</code>.</p>
+        </section>
+
+        <section>
+          <h3>Ruby</h3>
+          <p class="box--small copy--small left-align"><strong>Practice:</strong> Write a command line program that asks the user for the year they were born, then calculates their age in years, days, and seconds. Tell the user how old they are in these different formats. (Note: you'll be using <code>gets</code> and <code>puts</code> in this program, along with some math)</p>
+          <p class="box--small copy--small left-align">Temperature conversion! Make a program that asks the user for the temperature in Fahrenheit and print out the temperature in Celsius and Kelvins.</p>
+          <p class="box--small copy--small left-align"><strong>More info:</strong> Read more on methods and some basic methods already given to you <a href="http://pine.fm/LearnToProgram/?Chapter=05" alt="Chp 5 of Learn to Program">Chapter 5 of Learn to Program</a>
+        </section>
+
+      </div>
+      <footer>
+        <div class="copyright">
+          Intro to Ruby ~ GDI Boston ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
