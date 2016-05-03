@@ -29,11 +29,11 @@
         <div class="slides">
                 <!-- Welcome & Intros - 20 min -->
                 <section>
-                    <img src="images/gdi-dayton-logo.png" class="img--bare" height="450px" />
-                    <div class="box--small">
-                        <h3><span class="green">Intro to Ruby</span></h3>
-                        <h4><span class="blue">Class 3</span></h4>
-                    </div>
+                  <img src="images/circle-logo.png" class="img--bare" />
+                  <div class="box--small">
+                    <h3><span class="green">Intro to Programming with Ruby</span></h3>
+                    <h4><span class="blue">Class 3</span></h4>
+                  </div>
                 </section>
 
                 <section>
@@ -51,7 +51,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <p class="box copy--small"><small><strong>Girl Develop It is dedicated to providing a harrasment free learning experience for <em>everyone</em>.</strong><br/>For more information, see our <a href="http://www.girldevelopit.com/code-of-conduct" target="_blank">Code of Conduct</a>.</small>
                     </p>
                 </section>
@@ -61,6 +60,7 @@
                     <h3>Homework Discussion</h3>
                     <p class="box ">How was last week's homework?</p>
                     <p class="box copy--small">Do you have any questions or concepts that you'd like to discuss?</p>
+                    <p class="box copy--small">Is anyone <strong>BRAVE</strong> enough to show what they have?</p>
                     <h6 class="grey">The Homework was:</h6>
                     <ul>
                         <li>Ranges problem</li>
@@ -136,7 +136,7 @@
                 <section>
                     <h3>What we will cover today</h3>
                     <ul class="list--xtall box--small">
-                        <li class="fragment">Methods</li>
+                        <li class="fragment">Methods / Functions</li>
                         <li class="fragment">Objects</li>
                         <li class="fragment">Object Oriented Programming</li>
                     </ul>
@@ -164,24 +164,15 @@
                     <p class="box--small copy--small fragment">If you have code you want to reuse or organize, methods will help.</p>
                 </section>
 
-                <!--section>
-                <h3>Let's Develop It!</h3>
-                <p class="box--small copy--small">Find the methods available on <a href="http://www.ruby-doc.org/core-2.1.0/String.html">String</a> and <a href="http://www.ruby-doc.org/core-2.1.0/Integer.html">Integer</a></p>
-                <p class="box--small copy--small">Do they have any similar methods?</p>
-                <pre><code contenteditable class="ruby">
-                "abc".next
-                => "abd"
-
-                "abz".next
-                => "aca"
-
-                1.next
-                => 2
-
-                -1.next
-                => 0
-                </code></pre>
-                </section-->
+                <section>
+                    <h3>Method VS Function</h3>
+                    <p class="copy--small box--small">Question: "Are methods and functions the same thing?"</p>
+                    <p class="copy--small box--small fragment">Answer: "For the most part"</p>
+                    <p class="copy--small box--small fragment">Functions are chunks of code you can re-use</p>
+                    <p class="copy--small box--small fragment">Methods are Functions that exist on objects</p>
+                    <p class="copy--small box--small fragment">Doesn't make sense? Don't worry! It's not really that important right now! </p>
+                    <p class="copy--small box--small fragment"><strong>For the purpose of this class, call them whichever word you want</strong></p>
+                </section>
 
                 <section>
                     <h3>Writing A Method</h3>
@@ -205,6 +196,7 @@
                         <br/>and parameters are <i>declared</i>.</p>
                     <p class="copy--small box--small">Note that the variable names don't have to match!</p>
                     <p class="copy--small box--small">In this code, <code>5</code> is an argument and <code>x</code> is a parameter</p>
+                    <p class="copy--small box--small">Class: <strong>Write this code into irb</strong> and call out what the results are!</p>
                     <pre><code contenteditable class="ruby">
                       def subtract(x,y) #parameters
                       x - y
@@ -219,21 +211,22 @@
                     <p class="copy--small box--small">Every Ruby method returns something.</p>
                     <p class="copy--small box--small">Usually, it's the last statement in the method.</p>
                     <p class="copy--small box--small">It could be the value sent to <strong>return</strong> if that came first.</p>
+                    <p class="copy--small box--small">Class: <strong>Write this code into irb</strong> and call out what the results are!</p>
                     <pre><code contenteditable class="ruby">
-                      def subtract(x,y)
+                      def subtract_a(x,y)
                       x - y
                       'another thing'
                       end
 
-                      return_value = subtract(5, 2)
+                      return_value = subtract_a(5, 2)
                       puts return_value
 
-                      def subtract(x,y)
+                      def subtract_b(x,y)
                       return x - y
                       'another thing'
                       end
 
-                      return_value = subtract(5, 2)
+                      return_value = subtract_b(5, 2)
                       puts return_value
                     </code></pre>
                 </section>
@@ -241,6 +234,7 @@
                 <section>
                     <h3>Local Variables</h3>
                     <p class="copy--small box--small">A local variable is a variable whose scope ends (goes out of context) when the function returns</p>
+                    <p class="copy--small box--small">Class: <strong>Write this code into irb</strong> and call out what the results are!</p>
                     <pre style="height: 180px; overflow: hidden"><code contenteditable class="ruby">
                       def doubleThis num
                         numTimes2 = num*2
@@ -260,24 +254,10 @@
                 </section>
 
                 <section>
-                    <h3>Let's Develop It!</h3>
-                    <p class="copy--small box--small">Let's write a method takes in a String <code>question</code> and returns an answer.</p>
-                    <pre style="height: 80px; overflow:hidden"><code contenteditable class="ruby">
-                      def method_name(parameter)
-                        # method implementation
-                      end
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h3>Keeping Track of Program Flow</h3>
-
-                </section>
-
-                <section>
                     <h3>Splat Arguments</h3>
                     <p class="copy--small box--small">Only in 1.9 or newer</p>
                     <p class="copy--small box--small">The Splat or asterisk operator will capture however many arguments you pass into <code>greet</code>.</p>
+                    <p class="copy--small box--small">If you might want to pass in a different number of arguments each time, a <strong>Splat</strong> argument might be the right choice!</p>
                     <pre><code contenteditable class="ruby">
                       def greet(greeting, *names)
                         names.each do |name|
@@ -325,130 +305,122 @@
                 </section>
 
                 <section>
-                    <h3>Named Parameters</h3>
-                    <p class="copy--small box--small">To pass variable parameters, or to pass named parameters,
-                    <br/>you can use an <strong>options hash</strong>.</p>
-                    <pre><code contenteditable class="ruby">
-                      def bake(name, options = {})
-                        flour = options[:flour] || "rye" #this is like setting a default value
-                        creamer = options[:creamer] || "cream"
-                        puts "baking a nice #{flour} loaf with #{creamer}"
+                    <h3>Let's Develop It!</h3>
+                    <p class="copy--small box--small">Lets write a method called <code>calculator</code>. It will take 2 numbers, like 22 and 5, and a string like "divide". For now, just do "add", "subtract", "multiply", and "divide"</p>
+                </section>
+                <section>
+                    <h3>Cheat!</h3>
+                    <p class="copy--small box--small">Here is some help to get started</p>
+                    <pre class="fragment "><code contenteditable class="ruby">
+                      def calculate(first_num, second_num, operation)
+                        # Do something different based on operation!
                       end
-
-                      bake("Wheat")
-                      bake("Sourdough", :flour => "sour")
-                      bake("Pumpernickel", :creamer => "butter")
                     </code></pre>
                 </section>
 
+            <!-- Objects -->
                 <section>
-                    <h3>Let's Develop It!</h3>
-                    <p class="copy--small box--small">Lets write a method called <code>englishNumber</code>. It will take a number, like 22, and return the english version of it (in this case, the string 'twenty-two'). For now, let's have it only work on integers from 0 to 100.</p>
+                    <h3>Objects and Classes</h3>
+                    <p class="box">
+                      "A <strong>Class</strong> is to an <strong>Object</strong> like a <strong>Book</strong> is to <strong>Mary Shelley's Frankenstein</strong>"
+                    </p>
+                </section>
+                <section>
+                    <h3>Classes</h3>
+                    <p class="copy--small box--small"><strong>Everything</strong> has a <strong>Class</strong>.</p>
+                    <p class="copy--small box--smallfragment">Classes define a template for objects. They describe what a certain type of object can do and what properties it has.</p>
+                    <p class="copy--small box--small">There are many kinds of classes you've already been using, including:
+                        <br/><code>String</code>, <code>Number</code>, <code>Array</code>, <code>Hash</code>, <code>Time</code>, ...</p>
                 </section>
 
-
-            <!-- Objects -->
                 <section>
                     <h3>Objects</h3>
                     <p class="box ">An <strong>Object</strong> is an instance of a <strong>Class</strong>
                     </p>
                     <p class="box ">Objects <strong>do things</strong> and have <strong>properties</strong>.</p>
+                    <div class="fragment">
+                        <p class="copy--small box--small">To create an instance of a class (aka: <strong>Object</strong>) we use <code>.new</code>
+                        </p>
+                        <pre style="height: 30px; overflow: hidden"><code contenteditable class=" ruby">
+                          arr = Array.new
+                        </code></pre>
+                        <p class="copy--small box--small"><code>arr</code> now refers to an <strong>instance</strong> of the <strong>class</strong> Array
+                        </p>
+                    </div>
                 </section>
 
                 <section>
-                    <h5>Object: Number</h5>
+                    <h3>Object: Number</h3>
                     <div class="left" style="width: 48%">
-                        <p class="box--small copy--small">What can it do?</p>
-                        <ul class="list--tall copy--xsmall">
-                            <li> Add</li>
-                            <li> Subtract</li>
-                            <li> Divide</li>
-                            <li> Multiply</li>
+                        <p class="">What can it do?</p>
+                        <ul class="copy--small box--small">
+                            <li> Add +</li>
+                            <li> Subtract -</li>
+                            <li> Divide /</li>
+                            <li> Multiply *</li>
                         </ul>
                     </div>
 
                     <div class="right" style="width: 48%">
-                        <p class="box--small copy--small">What are some properties?</p>
-                        <ul class="list--tall copy--xsmall">
-                            <li> Length</li>
-                            <li> Base</li>
-                            <li> Even</li>
+                        <p class="">Sample properties?</p>
+                        <ul class="copy--small box--small">
+                            <li> len - What is the length?</li>
+                            <li> base - What base is the number in? (2, 10, 16?)</li>
+                            <li> even - Is the number even, or odd?</li>
                         </ul>
                     </div>
                 </section>
-
-                <section>
-                    <h3>Object Class</h3>
-                    <p class="copy--small box--small"><strong>Objects</strong> can be grouped by Class.</p>
-                    <p class="copy--small box--smallfragment">Classes define a template for objects. They describe what a certain type of object can do and what properties they have in common.</p>
-                    <p class="copy--small box--small">There are many kinds of objects, including
-                        <br/><code>String</code>, <code>Number</code>, <code>Array</code>, <code>Hash</code>, <code>Time</code>, ...</p>
-                    <div class="fragment">
-                        <p class="copy--small box--small">To create an object we use <code>.new</code>
-                        </p>
-                        <pre style="height: 30px; overflow: hidden"><code contenteditable class=" ruby">
-                          array = Array.new
-                        </code></pre>
-                        <p class="copy--small box--small"><code>array</code> now refers to an object <i>instance</i>
-                        </p>
-                    </div>
-                </section>
-
                 <section>
                     <h3>Object Methods</h3>
                     <p class="copy--small box--small">Methods can be defined on objects.</p>
+                    <p class="copy--small box--small">Class: <strong>Write this code into irb</strong> and call out what the results are!</p>
                     <pre class="fragment "><code contenteditable class="ruby">
-                      array = Object.new
-
-                      def array.delete
-                      puts "deleted the array"
+                      class MyObject
+                        def delete
+                          puts "Deleted the thing!"
+                        end
                       end
 
-                      array.methods(false)
+                      o = MyObject.new
+
+                      puts o.methods.include?(:delete)
                     </code></pre>
                 </section>
 
                 <section>
                     <h3>Instance Variables</h3>
                     <p class="copy--small box--small">Represent object state</p>
-                    <p class="copy--small box--small">Represent object state</p>
                     <p class="copy--small box--small">Names start with an <code>@</code>
                     </p>
-                    <p class="copy--small box--small">Only visible inside the object</p>
+                    <p class="copy--small box--small">Only live inside the object</p>
+                    <p class="copy--small box--small">Class: <strong>Write this code into irb</strong> and call out what the results are!</p>
                     <pre class="fragment"><code contenteditable class=" ruby">
-                      cookie = Object.new
+                      class Cookie
+                        def add_chips(num_chips)
+                          @chips = num_chips
+                        end
 
-                      def cookie.add_chips(num_chips)
-                      @chips = num_chips
+                        def yummy?
+                          @chips > 100
+                        end
                       end
 
-                      def cookie.yummy?
-                      @chips > 100
-                      end
-
+                      cookie = Cookie.new
                       cookie.add_chips(500)
-                      cookie.yummy?   #=> true
+                      puts cookie.yummy?
                     </code></pre>
                 </section>
-
 
             <!-- OOP -->
                 <section>
                     <h3>Object Oriented Programming</h3>
                     <ul class="list--tall copy--small box--small">
-                        <li>Object Oriented Programming is one of many <strong>programming approaches</strong>: procedural, event-driven, functional, declarative...
-                        </li>
-                        <li class="fragment">These days, most programming is done in an OO language: Java, C#, C++.</li>
+                        <li>Object Oriented Programming is one of many <strong>paradigms</strong> of programming: procedural, event-driven, functional, declarative...</li>
+                        <li class="fragment">It's very common to encounter OOP in most companies, and especially in certain languages: Java, Ruby, C#, Python</li>
+                        <li class="fragment">... But! Some languages are good at more than one paradigm! (We're going to focus on OOP, though)</li>
                         <li class="fragment">All this means is that programs are <strong>organized around objects</strong> (data &amp; methods).</li>
-                        <li class="fragment">You might choose OOP because Objects make things <strong>easier to understand</strong> and act as a natural way to modularize code. When a large code base is composed of many small Objects, it is <strong>easier to maintain</strong> and change.
-                        </li>
+                        <li class="fragment">You might choose OOP because Objects make things <strong>easier to understand</strong> and act as a natural way to modularize code. </li>
                     </ul>
-                </section>
-
-                <section>
-                    <h3>OOP &amp; Easy Understanding</h3>
-                    <p class="copy--small box">Objects often take on names from their domain which makes them easy to conceptualize.</p>
-                    <p class="copy--small box">For example, without seeing my code, you can probably guess what an object called <code>Bike</code> can do (or not do)</p>
                 </section>
 
                 <section>
@@ -456,14 +428,23 @@
                     <p class="copy--small box">One thing that makes code easier to maintain is Encapsulation which is one of the fundamentals of OOP.</p>
                     <p class="copy--small box"><strong>Encapsulation</strong> is a nice way of saying "put all my properties/behaviors in my capsule where other objects can't touch them". </p>
                     <p class="copy--small box">By assigning certain responsibilities to objects, code is more purposeful and less likely to be changed by accident. </p>
+                    <p class="copy--small box">Real World Example: You don't need to know how the engine works to drive your car - you just need to know Start, Accelerate, Slow, and Off</p>
+                </section>
+
+                <section>
+                    <h3>OOP &amp; DRY</h3>
+                    <p class="copy--small box"><strong>DRY</strong> stands for <strong>Don't Repeat Yourself</strong></p>
+                    <p class="copy--small box">Code is said to be <strong>DRY</strong> when you don't have any copy/pasted code in multiple places - when each line that can be re-used, is. </p>
+                    <p class="copy--small box"><strong>DRY</strong> goes well beyond just OOP, but OOP makes DRY code easy, since everything lives in a class or object that you can re-use!</p>
+                    <p class="copy--small box">Think about how you can use <strong>Encapsulation</strong> to make your code more <strong>DRY</strong>
                 </section>
 
                 <section>
                     <h3>OOP &amp; Inheritance</h3>
-                    <p class="copy--small box--small">Just as you inherited traits from your mom, your objects may inherit traits from other objects.</p>
+                    <p class="copy--small box--small">Just as you inherited traits from your parents, your classes may inherit traits from other classes.</p>
                     <p class="copy--small box--small"><strong>Inheritance</strong> is when you use one class as the basis for another.</p>
                     <div class="fragment">
-                        <p class="copy--xsmall box--small">You might use Inheritance if two objects have the same properties and methods.
+                        <p class="copy--xsmall box--small">You might use Inheritance if two classes have the same properties and methods, but one will add some additional functionality the other doesn't need.
                             <br/>This way you don't need to write the same thing twice.
                         </p>
                         <pre><code contenteditable class=" ruby">
@@ -497,23 +478,16 @@
 
                 <section>
                     <h3>Homework</h3>
-                    <p class="left-align copy--small box">Use the <code>ask</code> method to enhance your text-based Adventure game.</p>
-                    <p class="left-align copy--small box">How many other methods can you make for actions in your game? Be prepared to share!</p>
+                    <p class="left-align copy--small box">Expand upon the calculate method from class.</p>
+                    <p class="left-align copy--small box">Make a class called "Calculator", and make each operation ("add", "subtract", "multiply","divide") into a method on Calculator </p>
+                    <p class="left-align copy--small box">Run a demonstration of having all of the operations return a correct result!</p>
                 </section>
 
                 <section>
-                    <h3>Homework</h3>
-                    <p class="left-align copy--small box">Expand upon englishNumber. First, put in thousands. So it should return 'one thousand' instead of 'ten hundred' and 'ten thousand' instead of 'one hundred hundred'.</p>
-                    <p class="left-align copy--small box">Expand upon englishNumber some more. Now put in millions, so you get 'one million' instead of 'one thousand thousand'. </p>
-                    <p class="left-align copy--small box">Then try adding billions and trillions. How high can you go?</p>
-                    <p class="left-align copy--small box">How about weddingNumber? It should work almost the same as englishNumber, except that it should insert the word "and" all over the place, returning things like 'nineteen hundred and seventy and two', or however wedding invitations are supposed to look. I'd give you more examples, but I don't fully understand it myself. You might need to contact a wedding coordinator to help you.</p>
-                </section>
-
-                <section>
-                    <img src="images/gdi-dayton-logo.png" class="img--bare" height="300px" />
+                    <img src="images/circle-logo.png" class="img--bare" height="300px" />
                     <div class="box--small">
                         <h3 class="event__title">Intro to Programming in Ruby</h3>
-                        <p class=""><small>@gdidayton &nbsp; | &nbsp; #GDIDAY3</small>
+                        <p class=""><small>@gdiboston</small>
                         </p>
                         <hr>
                         <p><small>We are done with class 3!</small>
@@ -534,7 +508,7 @@
 
         <footer>
             <div class="copyright">
-                Intro to Ruby ~ GDI Dayton ~
+                Intro to Ruby ~ GDI Boston ~
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
                 </a>
             </div>
