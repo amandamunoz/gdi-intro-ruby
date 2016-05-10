@@ -29,13 +29,12 @@
         <div class="slides">
                 <!-- Welcome & Intros - 20 min -->
                 <section>
-                    <img src="images/gdi-dayton-logo.png" class="img--bare" height="450px" />
+                    <img src="images/circle-logo.png" class="img--bare" height="450px" />
                     <div class="box--small">
                         <h3><span class="green">Intro to Ruby</span></h3>
                         <h4><span class="blue">Class 2</span></h4>
-                        <p class=""><small>@gdidayton &nbsp; | &nbsp; #GDIDAY3</small>
+                        <p class=""><small>@gdiboston &nbsp; </small>
                         </p>
-                        <p><small>Check in on the <a href="https://gdidayton.slack.com/messages/ruby/details/">#ruby</a> slack channel</small>
                     </div>
                 </section>
 
@@ -62,11 +61,12 @@
                 <!-- Homework Review - 10 min -->
                 <section>
                     <h3>Homework Discussion</h3>
-                    <p class="box">How was last week's homework?</p>
-                    <p class="box copy--small">Do you have any questions or concepts that you'd like to discuss?</p>
+                    <p class="box">How was last week's homework? <br>
+                    Do you have any questions or concepts that you'd like to discuss?</p>
                     <h6 class="grey">The Homework was:</h6>
-                    <p class="box--small copy--small left-align"><strong>Practice:</strong> Write a command line program that asks the user for the year they were born, then calculates their age in years, days, and seconds. Tell the user how old they are in these different formats. (Note: you'll be using <code>gets</code> and <code>puts</code> in this program, along with some math)</p>
-                    <p class="box--small copy--small left-align">Temperature conversion! Make a program that asks the user for the temperature in Fahrenheit and print out the temperature in Celsius and Kelvins.</p>
+                    <p class="box--small copy--small left-align">Command line: create a directory and a file in that directory.</p>
+                    <p class="box--small copy--small left-align"> Write a command line program that asks the user for the year they were born, then calculates their age in years, days, and seconds. Tell the user how old they are in these different formats.</p>
+                    <p class="box--small copy--small left-align">Temperature conversion - Make a program that asks the user for the temperature in Fahrenheit and print out the temperature in Celsius and Kelvins.</p>
 
                 </section>
 
@@ -78,6 +78,11 @@
                         <li>Data types: Numbers (fixnum), Strings</li>
                         <li>Text editor, command line, and ruby shell</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h3>Review</h3>
+                    <p class="box">Let's create a directory for all of our GDI work.</p>
                 </section>
 
                 <section>
@@ -105,6 +110,7 @@
 				          ["The", "quick", "brown","fox"].join(" ")
 				          (irb)>>"The quick brown fox"
                   </code></pre>
+                  <p class="box--small copy--small left-align">Example use case: excel files, CSV's</p>
                 </section>
                 <section>
                     <h3>Arrays</h3>
@@ -178,6 +184,7 @@
 
                 <section>
                     <h3>Let's Develop It</h3>
+                    <p class="copy--small box">Write the following program in a new .rb file in your new GDI directory.</p>
                     <p class="copy--small box">Set up an array to hold the following values, and in this order: </br>23, 6, 47, 35, 2, 14. </p>
                     <p class="copy--small box">Print out the average of all 6 numbers. (You can use fixnum for this exercise, which will round down your answer.)</p>
                     </p>
@@ -203,6 +210,7 @@
                     <h3>Booleans</h3>
                     <p class="box copy--small">A <strong>boolean</strong> is a basic data type. It can have only two values</p>
                     <p style="font-size: 80px;"><strong>true</strong> or <strong>false</strong>
+                      <p class="box copy--small">(Boolean algebra - a branch of algebra first introduced by mathematician, philosopher, and logician George Boole. Boolean algebra is fundamental in electronics, set theory, statistics, and all modern programming languages.)</p>
                     </p>
                 </section>
 
@@ -350,11 +358,11 @@
                       secret_number = 312
 
                       if user_guess < secret_number
-                      puts "Too low!"
+                        puts "Too low!"
                       elsif user_guess > secret_number
-                      puts "Too high!"
+                        puts "Too high!"
                       else
-                      puts "You guessed it. Wow maybe you're psychic...."
+                        puts "You guessed it. Wow maybe you're psychic...."
                       end
                     </code></pre>
                     <p>Can you tell what this code does?</p>
@@ -369,7 +377,7 @@
                     <p class="copy--small box--small">We achieve this using <code>if</code> statements and boolean expressions.</p>
                     <pre style="height: 120px; overflow:hidden"><code  class="ruby">
                       if x == 5
-                      puts 'x is equal to 5'
+                        puts 'x is equal to 5'
                       end
                     </code></pre>
                 </section>
@@ -379,9 +387,9 @@
                     <p class="copy--small box--small">We often want a different block to execute if the statement is false. This can be accomplished using <code>else</code>.</p>
                     <pre style="height: 150px; overflow:hidden"><code  class="ruby">
                       if x == 5
-                      puts 'x is equal to 5'
+                        puts 'x is equal to 5'
                       else
-                      puts 'x is not equal to 5'
+                        puts 'x is not equal to 5'
                       end
                     </code></pre>
                 </section>
@@ -393,7 +401,7 @@
 					            puts "I am a fortune-teller.  Tell me your name:"
 					            name = gets.chomp
 					            if name == "Chris"
-						              puts "I see great things in your future."
+						              puts "I see great things in your future"
 					            else
 						              puts "Your future is... Oh my!  Look at the time!"
 						              puts "I really have to go, sorry!"
@@ -408,17 +416,17 @@
                     <pre><code  class="ruby">
                       # And
                       if x > 3 && y > 3
-                      puts 'Both values are greater than 3'
+                        puts 'Both values are greater than 3'
                       end
 
                       # Or
                       if x != 0 || y != 0
-                      puts 'The point x,y is not on the x or y axis'
+                        puts 'The point x,y is not on the x or y axis'
                       end
 
                       # Not
                       if not(x > y)
-                      puts 'x is less than y'
+                        puts 'x is less than y'
                       end
                     </code></pre>
                 </section>
@@ -432,15 +440,20 @@
                     <p>For example:</p>
                     <pre><code  class="ruby">
                       if x > 10
-                      puts "x is greater than 10"
-                      if x < 20
-                      puts "but x is less than 20"
-                      end
-                      elsif x <= 10 && x > 0
-                      puts "x is a number between 1 and 10"
+                        puts "x is greater than 10"
+                      elsif x < 20
+                        puts "but x is less than 20"
+                      elsif 0 < x && x <= 10
+                        puts "x is a number between 1 and 10"
                       else
-                      puts "Wow, don't be so negative, dude"
+                        puts "Wow, don't be so negative, dude"
                       end
+
+                      # Note!
+                      # You must use separate expressions:
+                      # You might be tempted, instead of  0 < x && x <= 10
+                      # to write 0 < x <= 10 (like you might in math)
+                      # This will cause errors.
                     </code></pre>
                 </section>
 
@@ -494,8 +507,8 @@
                       x = 10
 
                       while x > 0
-                      puts "Loop number #{x}"
-                      x = x - 1
+                        puts "Loop number #{x}"
+                        x = x - 1
                       end
 
                       puts 'Done'
@@ -515,6 +528,7 @@
                     </div>
                     <p class="copy--small box--small">The while statement takes a condition, and as long as it evaluates to true, the code block beneath it is repeated. This creates a <strong>loop</strong>.</p>
                     <p class="copy--small box--small"> Without the <code>x = x - 1</code> statement, to increment the value of <code>x</code>, this would be an <strong>infinite loop</strong> :( :( :(</p>
+                    <p class="copy--small box--small">IRL example: reading a file, and wanting to stop at the end of file.</p>
                 </section>
 
                 <section>
@@ -524,11 +538,11 @@
                       num_bottles = 99
 
                       while num_bottles > 0
-                      puts "#{num_bottles} bottles of beer on the wall,
-                      #{num_bottles} bottles of beer, take one down, pass it
-                      around, #{num_bottles - 1} bottles of beer on the wall!"
+                        puts "#{num_bottles} bottles of beer on the wall,
+                              #{num_bottles} bottles of beer, take one down, pass it
+                              around, #{num_bottles - 1} bottles of beer on the wall!"
 
-                      num_bottles = num_bottles - 1
+                        num_bottles = num_bottles - 1
                       end
                     </code></pre>
                     <p class="copy--small box--small"><code>#{num_bottles}</code> is an example of <strong>string interpolation</strong>
@@ -560,6 +574,7 @@
                               puts "2 - Just keep swimming!"
                               puts "0 - Get me out of this thing!"
                               user_input = gets.chomp
+
                               if user_input == '0'
                                 loopy = false
                               end
@@ -577,6 +592,7 @@
                     <p class="copy--small box--small">First, we need a collection. Let's use a <strong>array</strong> of numbers to loop over.</p>
                     <pre style="height: 120px; overflow:hidden"><code  class="ruby" >
 				              my_array = [23, 6, 47, 35, 2, 14]
+
 				              my_array.each do |i|
 				                  puts "Value of i is #{i}"
 				              end
@@ -588,8 +604,9 @@
                     <p class="box--small">The loop has three parts:</p>
                     <pre style="height: 120px; overflow:hidden"><code  class="ruby" >
                       my_array = [23, 6, 47, 35, 2, 14]
+
                       my_array.each do |i|
-                      puts "Value of i is #{i}"
+                        puts "Value of i is #{i}"
                       end
                     </code></pre>
                     <ul class="list--tall copy--small">
@@ -614,16 +631,15 @@
                 </section>
                 <section>
                     <pre><code  class="ruby">
-				            my_array = [23, 6, 47, 35, 2, 14]
-				            total = 0
-				            myarray.each do |i|
-					            total += i
-				              average = total/my_array.size
+                      my_array = [23, 6, 47, 35, 2, 14]
+                      total = 0
 
-				              print "The average is #{average}"
-
-				              print "The max is #{my_array.max}"
-
+                      myarray.each do |i|
+                        total += i
+                        average = total/my_array.size
+                        print "The average is #{average}"
+                        print "The max is #{my_array.max}"
+                      end
 
 			                 </code></pre>
                 </section>
@@ -641,7 +657,7 @@
                     <pre style="height: 130px; overflow: hidden;"><code  class="ruby">
                       new_array = [1, 3, 5]
 
-				              new_range = new_range = (1..10)
+				              new_range = (1..10)
 
                       new_hash = {"dog" => "snoopy", "bird" => "woodstock"}
                     </code></pre>
@@ -737,10 +753,9 @@
                       grades_hash.size
                       grades_hash.has_key?("Jan Doe")
                       new_hash.has_value?(35)
-
                     </code></pre>
-                    <p class="copy--small box--small">Syntax:</p>
-                    <p><code>{ key => value, key => value }</code>
+                    <p class="copy--small box--small">Syntax (keys as symbols): <code>{ key: value, key: value }</code></p>
+                    <p class="copy--small box--small">Syntax (keys as strings): <code>{ key => value, key => value }</code></p>
                 </section>
 
                 <section>
@@ -893,17 +908,16 @@
 
 
             <section>
-                <img src="images/gdi-dayton-logo.png" class="img--bare" height="300px" />
+                <img src="images/circle-logo.png" class="img--bare" height="300px" />
                 <div class="box--small">
                     <h3 class="event__title">Intro to Programming in Ruby</h3>
-                    <p class=""><small>@gdidayton &nbsp; | &nbsp; #GDIDAY3</small>
+                    <p class=""><small>@gdiboston &nbsp; | &nbsp; #GDIDAY3</small>
                     </p>
                     <hr>
                     <p><small>We are done with class 2!</small>
                     </p>
                     <p><small>We have done a lot, I know you have questions so ask them!</small>
                     </p>
-                    <p><small>Check in on the <a href="https://gdidayton.slack.com/messages/ruby/details/">#ruby</a> slack channel</small>
                 </div>
                 <p class="copy--small box--small">
                     <a href="setup.html">Setup</a> &nbsp; | &nbsp;
@@ -918,7 +932,7 @@
 
         <footer>
             <div class="copyright">
-                Intro to Ruby ~ GDI Dayton ~
+                Intro to Ruby ~ GDI Boston ~
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
                 </a>
             </div>
