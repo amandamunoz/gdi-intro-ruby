@@ -27,7 +27,7 @@
       <div class="slides">
           <!-- Welcome & Intros - 20 min -->
           <section>
-            <img src="images/gdi-dayton-logo.png" class="img--bare" height="450px" />
+            <img src="images/circle-logo.png" class="img--bare" />
             <div class="box--small">
               <h3><span class="green">Intro to Ruby</span></h3>
               <h4><span class="blue">Class 4</span></h4>
@@ -58,60 +58,10 @@
             <p class="box">How was last week's homework? </p>
             <p class="box copy--small">Do you have any questions or concepts that you'd like to discuss?</p>
             <h6 class="grey">The Homework was:</h6>
-             <p class="left-align copy--small box">Expand upon englishNumber.</p>
-            <p class="left-align copy--small box">Use the <code>ask</code> method to enhance your text-based Adventure game.</p>
-            <p class="left-align copy--small box">What other methods did you make?</p>
-
+            <p class="left-align copy--small box">Expand upon the calculate method from class.</p>
+            <p class="left-align copy--small box">Make a class called "Calculator", and make each operation ("add", "subtract", "multiply","divide") into a method on Calculator </p>
+            <p class="left-align copy--small box">Run a demonstration of having all of the operations return a correct result!</p>
           </section>
-
-          <!--section>
-            <h3>HW: English Numbers</h3>
-            <p class="copy--small box--small">You could expand the EnglishNumbers program by adding the following code to deal with thousands:</p>
-            <pre><code class="ruby">
-            left  = number  #original code, set 'left' variable
-
-            write = left/1000          #  How many thousands left to write out?
-            left  = left - write*1000  #  Subtract off those thousands.
-
-            if write > 0
-              thousands  = englishNumber write
-              numString = numString + thousands + ' thousand'
-
-              if left > 0
-                numString = numString + ' '
-              end
-            end
-
-            write = left/100 # this line begins the existing code that deals with hundreds
-            </code></pre>
-          </section-->
-
-          <!--section>
-            <h3>HW: Wedding Numbers</h3>
-            <p class="copy--small box--small">You could modify the code in the EnglishNumbers program to make it WeddingNumbers by replacing some of the added spaces with added "and"s and spaces: </p>
-            <pre><code class="ruby">
-            # numString = numString + ' '   # old code
-
-            numString = numString + ' and '
-             </code></pre>
-          </section-->
-
-          <!--section>
-            <h3>HW: 99 Bottles of Beer</h3>
-            <p class="copy--small box--small">You could modify the code for 99 Bottles of Beer shown in Class2 to include the functionality in the EnglishNumber class: </p>
-            <pre><code class="ruby">
-            require_relative 'englishnumber.rb'
-            num_bottles = 999
-
-            while num_bottles > 0
-              puts "#{englishNumber(num_bottles)} bottles of beer on the wall,
-              #{englishNumber(num_bottles)} bottles of beer, take one down, pass it
-              around, #{englishNumber(num_bottles - 1)} bottles of beer on the wall!"
-
-              num_bottles = num_bottles - 1
-            end
-             </code></pre>
-          </section-->
 
           <section>
               <h3>Review</h3>
@@ -153,20 +103,6 @@
               <p class="copy--xsmall box--small">You can view all the built in classes and their associated methods in the <a href="http://www.ruby-doc.org/core-2.0.0/" alt="Ruby docuemntation">Ruby documentation</a>.</p>
           </section>
 
-          <!--section>
-              <h3>Extending a Class</h3>
-              <p class="copy--small box--small">You can write new methods for the built in classes of Ruby. They will then be available to all instances of that class in your program.</p>
-              <pre style="height: 140px; overflow: hidden;"><code contenteditable class="ruby">
-              class String
-                def get_excited
-                  return self + "!!!"
-                end
-              end
-              </code></pre>
-              <p class="copy--small box--small"><code>self</code> refers to the object calling the method.</p>
-              <p class="copy--xsmall box--small">You can redefine existing methods for classes this way, too, but it's not recommended.</p>
-          </section-->
-
           <!-- Creating a class: 20 minutes -->
           <section>
               <h3>Creating a Class</h3>
@@ -205,12 +141,12 @@
 
           <section>
               <h3>Refactoring a Class</h3>
+              <p class="copy--small box--small"><strong>Refactoring</strong> is taking existing code and moving or re-writing it to improve on the design or organization.</p>
               <p class="copy--small box--small">What is the result of calling the <code>showing</code> method on a newly-created, un-rolled Die object?</p>
               <p class="copy--small box--small">We can avoid this by calling the <code>roll</code> method as part of the creation of a new instance of Die.</p>
               <pre><code class="ruby">
               # die.rb
               class Die
-
                 def initialize
                   roll
                 end
@@ -222,7 +158,6 @@
                 def showing
                   @numberShowing
                 end
-
               end
               </code></pre>
           </section>
@@ -290,6 +225,19 @@
           </section>
 
           <section>
+              <h3>Inheritance</h3>
+              <p class="copy--small box--small"><strong>Subclass</strong>: A class that inherits from another class. Ex: <strong>ScaryBook</strong> would be a subclass of <strong>Book</strong></p>
+              <p class="copy--small box--small"><strong>Superclass</strong>: A class that another class inherits from.  Ex: <strong>Car</strong> would be the superclass of <strong>Sedan</strong></p>
+              <pre><code class="ruby">
+              # Elf is the Subclass
+              # Character is the Superclass
+              class Elf < Character
+                # ... more stuff goes here
+              end
+              </code></pre>
+          </section>
+
+          <section>
             <h3>Inheritance</h3>
             <p class="copy--small box--small">Denote that Elf inherits from Character by using the <code>&lt;</code> symbol</p>
             <pre><code class="ruby">
@@ -310,7 +258,7 @@
           </section>
 
           <section>
-              <h3>Inheritance</h3>
+              <h3>Inheritance cont.</h3>
               <p class="copy--small box--small"><strong>Subclasses</strong> may differ from from their <strong>super classes</strong> in some ways. Methods can be overwritten when this is the case.</p>
 
               <pre><code contenteditable class="ruby">
@@ -328,6 +276,30 @@
               #in irb
               load 'character.rb'
               me = Elf.new("Cheri")
+              me.heal
+              </code></pre>
+              <p class="copy--xsmall box--small">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
+          </section>
+
+          <section>
+              <h3>Inheritance cont.</h3>
+              <p class="copy--small box--small"><strong>Subclasses</strong> may differ from from their <strong>super classes</strong> in some ways. Methods can be overwritten when this is the case.</p>
+
+              <pre><code contenteditable class="ruby">
+              # in character.rb, after Character class code
+              class Dwarf < Character
+                def dig
+                  puts "I'm a good digger!"
+                end
+
+                def heal
+                  @health += 4 # Dwarves don't heal as much as elves
+                end
+              end
+
+              #in irb
+              load 'character.rb'
+              me = Elf.new("Doug")
               me.heal
               </code></pre>
               <p class="copy--xsmall box--small">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
