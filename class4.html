@@ -117,7 +117,7 @@
               # die.rb
               class Die
 
-                def roll
+                def roll!
                    @numberShowing = 1 + rand(6)
                   #rand(6) returns a random-ish number between 0-5
                 end
@@ -138,7 +138,7 @@
                 #in irb
                 load 'die.rb'
                 die = Die.new
-                die.roll
+                die.roll!
                 puts die.showing
                 </code></pre>
                 <p class="copy--small box--small">You can use it in another file by requiring it. We'll discuss this later.</p>
@@ -154,10 +154,10 @@
               # die.rb
               class Die
                 def initialize
-                  roll
+                  roll!
                 end
 
-                def roll
+                def roll!
                    @numberShowing = 1 + rand(6)
                 end
 
@@ -189,11 +189,11 @@
                 @health = 10
               end
 
-              def heal
+              def heal!
                 @health += 6
               end
 
-              def adventure
+              def adventure!
                 if @health > 0
                   puts "#{@name} goes on a great adventure and meets a dragon!"
                   puts "The dragon hugged #{@name} kind of hard..."
@@ -214,9 +214,9 @@
                     # in irb
                     load 'character.rb'
                     me = Character.new("Cheri")
-                    me.adventure
-                    me.heal
-                    me.adventure
+                    me.adventure!
+                    me.heal!
+                    me.adventure!
                     # repeat until you're done having fun
                   </code></pre>
           </section>
@@ -257,7 +257,7 @@
             #in irb
             load 'character.rb'
             me = Elf.new("Cheri")
-            me.adventure
+            me.adventure!
             me.twinkle
             </code></pre>
             <p class="copy--small box--small">Notice that the initialize method was also inherited, as our new Elf knows its name and started off with 10 health.</p>
@@ -274,7 +274,7 @@
                   puts "I'm super magical!"
                 end
 
-                def heal
+                def heal!
                   @health += 8 # it's easier to heal when you're magic
                 end
               end
@@ -282,7 +282,7 @@
               #in irb
               load 'character.rb'
               me = Elf.new("Cheri")
-              me.heal
+              me.heal!
               </code></pre>
               <p class="copy--xsmall box--small">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
           </section>
@@ -298,15 +298,15 @@
                   puts "I'm a good digger!"
                 end
 
-                def heal
+                def heal!
                   @health += 4 # Dwarves don't heal as much as elves
                 end
               end
 
               #in irb
               load 'character.rb'
-              me = Elf.new("Doug")
-              me.heal
+              me = Dwarf.new("Doug")
+              me.heal!
               </code></pre>
               <p class="copy--xsmall box--small">More information about inheritance can be found <a href="http://rubylearning.com/satishtalim/ruby_inheritance.html" alt="rubylearning.com">here</a>.</p>
           </section>
